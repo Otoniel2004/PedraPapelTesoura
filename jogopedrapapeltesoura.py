@@ -1,127 +1,107 @@
-from random import randint
-from time import sleep
+import random
+import time
 
-print("Vamos jogar PEDRA, PAPEL, TESOURA????? \nVAMOS LÁ")
+print("-" * 45)
+print("Vamos Jogar Pedra, Papel, Tesoura!!!")
+print("-" * 45)
+print("Digite o Número Correspondente a Sua Escolha\nPedra....[1]\nPapel....[2]"
+      "\nTesoura..[3]")
+print("-" * 45)
+entrada = int(input("Faça Sua Escolha: "))
+print("-" * 45)
 
-n1 = randint(1, 3)
+roll = random.randint(1, 3)
 
-print("-=" * 10)
-
-print("  [ 1 ] PEDRA \n  [ 2 ] PAPEL \n  [ 3 ] TESOURA")
-
-print("-=" * 10)
-
-opc = int(input("Escolha uma opção acima: "))
-
-while opc != 5:
-
-    if opc == 1 and n1 == 1:
-        sleep(1)
-        print("JO")
-        sleep(1)
-        print("KEN")
-        sleep(1)
-        print("PO")
-        sleep(1)
-        print("\033[33mEMPATE\033[m, os dois escolheram PEDRA")
-
-    elif opc == 2 and n1 == 2:
-        sleep(1)
-        print("JO")
-        sleep(1)
-        print("KEN")
-        sleep(1)
-        print("PO")
-        sleep(1)
-        print("\033[33mEMPATE\033[m, os dois escolheram PAPEL")
-
-    elif opc == 3 and n1 == 3:
-        sleep(1)
-        print("JO")
-        sleep(1)
-        print("KEN")
-        sleep(1)
-        print("PO")
-        sleep(1)
-        print("\033[33mEMPATE\033[m, os dois escolheram TESOURA")
-
-    elif opc == 1 and n1 == 3:
-        sleep(1)
-        print("JO")
-        sleep(1)
-        print("KEN")
-        sleep(1)
-        print("PO")
-        sleep(1)
-        print("\033[32mVOCÊ GANHOU\033[m, o PC escolheu TESOURA e você PEDRA")
-
-    elif opc == 2 and n1 == 1:
-        sleep(1)
-        print("JO")
-        sleep(1)
-        print("KEN")
-        sleep(1)
-        print("PO")
-        sleep(1)
-        print("\033[32mVOCÊ GANHOU\033[m, o PC escolheu PEDRA e você PAPEL")
-
-    elif opc == 3 and n1 == 2:
-        sleep(1)
-        print("JO")
-        sleep(1)
-        print("KEN")
-        sleep(1)
-        print("PO")
-        sleep(1)
-        print("\033[32mVOCÊ GANHOU\033[m, o PC escolheu PAPEL e você TESOURA")
-
-    elif opc == 2 and n1 == 3:
-        sleep(1)
-        print("JO")
-        sleep(1)
-        print("KEN")
-        sleep(1)
-        print("PO")
-        sleep(1)
-        print("\033[31mVOCÊ PERDEU\033[m, o PC escolheu TESOURA e você PAPEL")
-
-    elif opc == 3 and n1 == 1:
-        sleep(1)
-        print("JO")
-        sleep(1)
-        print("KEN")
-        sleep(1)
-        print("PO")
-        sleep(1)
-        print("\033[31mVOCÊ PERDEU\033[m, o PC escolheu PEDRA e você TESOURA")
-
-    elif opc == 1 and n1 == 2:
-        sleep(1)
-        print("JO")
-        sleep(1)
-        print("KEN")
-        sleep(1)
-        print("PO")
-        sleep(1)
-        print("\033[31mVOCÊ PERDEU\033[m, o PC escolheu PAPEL e você PEDRA")
-
+while entrada != 4:
+    if entrada == 1 and roll == 1:
+        print("\033[32mJô\033[m")
+        time.sleep(1)
+        print("\033[33mKen\033[m")
+        time.sleep(1)
+        print("\033[31mPo\033[m")
+        time.sleep(0.5)
+        print("\033[33mEmpate!\033[m Você e o PC Escolheram Pedra")
+    elif entrada == 1 and roll == 2:
+        print("\033[32mJô\033[m")
+        time.sleep(1)
+        print("\033[33mKen\033[m")
+        time.sleep(1)
+        print("\033[31mPo\033[m")
+        time.sleep(0.5)
+        print("\033[31mPerdeu!\033[m Você Escolheu Pedra e o PC Papel")
+    elif entrada == 1 and roll == 3:
+        print("\033[32mJô\033[m")
+        time.sleep(1)
+        print("\033[33mKen\033[m")
+        time.sleep(1)
+        print("\033[31mPo\033[m")
+        time.sleep(0.5)
+        print("\033[32mVenceu!!!\033[m Você Escolheu Pedra e o PC Tesoura")
+    elif entrada == 2 and roll == 1:
+        print("\033[32mJô\033[m")
+        time.sleep(1)
+        print("\033[33mKen\033[m")
+        time.sleep(1)
+        print("\033[31mPo\033[m")
+        time.sleep(0.5)
+        print("\033[32mVenceu!!!\033[m Você Escolheu Papel e o PC Pedra")
+    elif entrada == 2 and roll == 2:
+        print("\033[32mJô\033[m")
+        time.sleep(1)
+        print("\033[33mKen\033[m")
+        time.sleep(1)
+        print("\033[31mPo\033[m")
+        time.sleep(0.5)
+        print("\033[33mEmpate!\033[m Você e o PC Escolheram Papel")
+    elif entrada == 2 and roll == 3:
+        print("\033[32mJô\033[m")
+        time.sleep(1)
+        print("\033[33mKen\033[m")
+        time.sleep(1)
+        print("\033[31mPo\033[m")
+        time.sleep(0.5)
+        print("\033[31mPerdeu!\033[m Você Escolheu Papel e o PC Tesoura")
+    elif entrada == 3 and roll == 1:
+        print("\033[32mJô\033[m")
+        time.sleep(1)
+        print("\033[33mKen\033[m")
+        time.sleep(1)
+        print("\033[31mPo\033[m")
+        time.sleep(0.5)
+        print("\033[31mPerdeu!\033[m Você Escolheu Tesoura e o PC Pedra")
+    elif entrada == 3 and roll == 2:
+        print("\033[32mJô\033[m")
+        time.sleep(1)
+        print("\033[33mKen\033[m")
+        time.sleep(1)
+        print("\033[31mPo\033[m")
+        time.sleep(0.5)
+        print("\033[32mVenceu!!!\033[m Você Escolheu Pedra e o PC Tesoura")
+    elif entrada == 3 and roll == 3:
+        print("\033[32mJô\033[m")
+        time.sleep(1)
+        print("\033[33mKen\033[m")
+        time.sleep(1)
+        print("\033[31mPo\033[m")
+        time.sleep(0.5)
+        print("\033[33mEmpate!\033[m Você e o PC Escolheram Tesoura")
     else:
-        print("Escolha uma opção valida acima...")
+        print("...")
+        time.sleep(1)
+        print("Insira Um Valor Válido")
+        time.sleep(1)
 
-    sleep(2.5)
+    print("-" * 45)
+    print("Vamos Tentar Novamente!!\nDigite o Número Correspondente a Sua "
+          "Escolha\nPedra..........[1]\nPapel..........[2]\nTesoura........[3]"
+          "\nSair do Jogo...[4]")
+    print("-" * 45)
+    entrada = int(input("Faça Sua Escolha: "))
+    print("-" * 45)
+    roll = random.randint(1, 3)
 
-    n1 = randint(1, 3)
-
-    print("Vamos jogar de novo??")
-    print("-=" * 15)
-    print("  [ 1 ] PEDRA \n  [ 2 ] PAPEL \n  [ 3 ] TESOURA \n  [ 4 ] Sair do Programa")
-    print("-=" * 15)
-
-    opc = int(input("Escolha uma opção acima: "))
-
-    if opc == 4:
-        opc += 1
-
-print("Processando...")
-sleep(2)
-print("Fim do Programa, Volte sempre!!")
+time.sleep(0.5)
+print("Encerrando Jogo, Aguade...")
+time.sleep(2)
+print("Jogo Encerrado, \033[33mObrigado\033[m Por Jogar!!!\nVolte Sempre\n"
+      "\033[32mCreated by\033[m\033[31m Otoniel\033[m")
